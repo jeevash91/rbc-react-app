@@ -1,0 +1,50 @@
+.img-div {
+  background-color: #9f9f9f;
+  height: 50%;
+  width: 100%;
+  border-radius: 20px;
+}
+
+.book-img {
+  height: 100%;
+  width: 70%;
+  border-radius: 20px;
+}
+
+.fixed_width{
+  width: 100%;
+}
+
+.flex-item {
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-size: small;
+  font-family: Helvetica, sans-serif;
+  background-color: #9f9f9f;
+  margin-left: 100px;
+  margin-top: 90px;
+  min-width: 180px;
+  min-height: 180px;
+  max-width: 250px;
+  max-height: 280px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+hr {
+  background-color: #000000;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 1px;
+}
+
+.btn-description {
+  margin-top: 12%;
+}
+
+.cart-icon {
+  margin-left: 5%;
+  border-bottom: #000000;
+}

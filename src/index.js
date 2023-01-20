@@ -1,17 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux'
+import store from './purchaser/store';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './purchaser/App.jsx';
+import NotFound from './shared/components/not_found';
+import BooksList from './purchaser/components/books_list';
+import Cart from './purchaser/components/cart';
+
+let baseURL = `api/v1`;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+      <Routes>
+        <Route exact path={`${baseURL}/`} element={<BooksList />} />
+        <Route exact path={`${baseURL}/books`} element={<BooksList />} />
+        <Route exact path={`${baseURL}/cart`} element={<Cart />} />
+        <Route element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </Provider>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

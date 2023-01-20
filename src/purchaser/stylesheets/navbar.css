@@ -1,0 +1,28 @@
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+.app-header {
+  background-color: #9f9f9f;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header-view {
+  padding-right: 120px;
+  color: #ffffff;
+}
+
+.header-logo {
+  height: 50px;
+  width: 120px;
+}
+
+a, a:visited {
+  color: #000000;
+  text-decoration: none;
+}
